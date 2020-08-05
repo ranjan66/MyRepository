@@ -1,104 +1,20 @@
-Simple App Using Angular 6 as Front End and Spring Boot 2 as the Server
-What is the Use of This Repo
-This App is a Simple Angular 6 and Springboot 2 App which uses
+Student-Management-System
+This consist back end of the Flight Management System using Spring Boot and Angular 9 based UI.
 
-Angular 6
-Angular Components
-HTTP Client
-Angular Routing
-Services
-Very Basic Bootstrap
-SpringBoot 2
-Springboot RestController
-Service, Repository(DAO) from Spring Framework
-Autowiring is used as well to inject the Dependencies
-This Applications template can be copied and used to build other bigger applications.
+Development server
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-The CSS used is very basic since the main aim of this project is to focus on angular 6
+Code scaffolding
+Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
 
-What Does this Application do
-This Application has just two pages.
+Build
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the --prod flag for a production build.
 
-A Customer List Page which Lists out all the Customers
-A Customer Details Page which will display the Details for the Selected Customer
-Prerequites to Run the Application
-Install NodeJS
-Refer https://nodejs.org/en/ to install NodeJS
+Running unit tests
+Run ng test to execute the unit tests via Karma.
 
-Install Angular CLI
-Use the following command to install angular CLI
+Running end-to-end tests
+Run ng e2e to execute the end-to-end tests via Protractor.
 
-npm install -g @angular/cli
-Refer https://cli.angular.io/ to know more about angular CLI
-
-Install maven
-Install Maven and Ensure IDE is pointing to Right Maven folder
-
-Also Ensure maven is set as a path variable to that maven commands can be run easily
-
-Refer https://maven.apache.org/ for maven installation
-
-Steps to Run the Application
-Clone the repo into local
-
-Open the client folder and install the npm packages using the following commands
-
-cd client
-npm install
-Go Back to the Parent Project Folder and build the package using the following commands
-
-cd ..
-mvn clean package
-Go to server folder and start the Application using the following commands
-
-cd server
-mvn spring-boot:run
-The Application runs on localhost:8080 and the application runs in a embedded container in local
-
-Folder Structure
-client : This has the Client Code implemented using Angular 6
-
-server : This has the Springboot code
-
-pom.xml : This is multimodule pom. This pom in turn executes the pom within the client and the server folders
-
-Application Design
-Angular 6
-The Components Created are
-
-CustomersComponent : This Component Is to Display the List of Customers
-
-CustomerdetailsComponent : This Component Displays the Details for a Single Selected Customer
-
-The Services Created are
-
-DataService : The Service Hits the SpringBoot REST API In order to get the necessary JSONs
-Model Classes Used are
-
-Customer : This is the model class used for the CustomersComponent to define the structure of each customer in the list
-
-CustomerDetails : This is the model class used for CustomerdetailsComponent to define the structure containing all the customer details
-
-CustomerDetailsReq : This is the model class used to create the POST Request Body for the REST API call
-
-Routing Module is used to Route between the 2 pages in the application The 2 paths used in the routing module are
-
-/customers : This url displays the customer list and points to CustomersComponent
-
-/customerdetails/id : This url displays the details for each customer and points to CustomerdetailsComponent
-
-Springboot 2
-The package com.example.demo has the DemoApplication.java file which ensures that the application runs in an embedded container and forms the starting point of the code
-
-The package com.example.dao.impl has the DAO ( Data Access Object ) Defined. The package com.example.dao has the interfaces defined for the DAOs. The DAO( Data Access Object ) connects to the DataBase and gets the necessary data
-
-The package com.example.service.impl has the Services Defined . The package com.example.service has the interfaces defined for the Services. The Service is where the business logic is run on the Data which comes from DAO
-
-The package com.example.controller has the Rest Controller defined. The controller has all the end points defined and mentions which function should be executed when an end point is called. The Controller also defines which Endpoint Calls which Service
-
-The package com.example.models has all the java models defined
-
-The application.properties file is used to define various properties such as the port in which the embedded container runs , the context path of the application etc
-
-Postman Collection
-Import the postman collections from postman folder into Postman. This postman collection has all the REST endpoints which are implemented in springboot.
+Further help
+To get more help on the Angular CLI use ng help or go check out the Angular CLI README.
